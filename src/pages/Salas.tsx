@@ -1,16 +1,22 @@
-import { FormEvent, useState } from 'react';
 
 import illustrationImg from '../assets/images/illustration.svg'
+import { Button } from '../components/Button';
+import { useHistory } from 'react-router-dom';
 
-import '../styles/auth.scss'
+import '../styles/salas.scss'
 
-export function NewRoom() {
+export function Salas() {
+    const history = useHistory();
+
     return (
-        <div id="page-auth">
+        <div id="page-salas">
             <aside>
                 <img src={illustrationImg} alt="Iustração simbolizando perguntas e respostas" />
-                <strong>Crie salas de Q&amp;A ao-vivo</strong>
-                <p>Tire as dúvidas da sua audiência em tempo real</p>
+                <strong>Salas Criadas</strong>
+                <p>Lorem ipsum dolor sit amet, consect, lorem ipsum dolor sit amet, lorem ipsum dolor sit</p>
+                <div className="button-div">
+                    <button onClick={()=> history.push('/rooms/new')}>Crie uma sala</button>
+                </div>
             </aside>
         </div>
     )

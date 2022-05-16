@@ -1,4 +1,4 @@
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 import { FormEvent, useState } from 'react';
 
 import illustrationImg from '../assets/images/illustration.svg'
@@ -72,6 +72,10 @@ export function Home() {
             <Button type="submit">
               Entrar na sala
             </Button>
+
+            <p>
+              Quer descobrir todas as salas? <Link to="/salas">clique aqui</Link>
+            </p>
           </form>
         </div>
       </main>
